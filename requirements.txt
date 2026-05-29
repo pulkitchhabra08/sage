@@ -1,2 +1,3 @@
 streamlit
-groq/ gemini api key
+google-genai
+requests
