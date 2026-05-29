@@ -64,6 +64,7 @@ st.markdown("""
         margin-bottom: 24px;
     }
     .brand-block { display: flex; align-items: center; gap: 12px; }
+    
     .avatar-block {
         width: 36px; height: 36px; border-radius: 50%;
         background: linear-gradient(135deg, #7c6aff, #f472b6);
@@ -87,7 +88,7 @@ st.markdown("""
         margin-bottom: 20px;
     }
 
-    /* Slide-in animation on appear specification */
+    /* Fixed Braces for slide-in animation syntax */
     @keyframes slideIn { 
         from { opacity: 0; transform: translateY(8px); } 
         to { opacity: 1; transform: none; } 
