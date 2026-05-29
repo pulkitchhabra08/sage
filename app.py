@@ -10,9 +10,11 @@ st.set_page_config(
     layout="centered"
 )
 
-# Injecting the exact fonts and style rules from your design system specification
-st.markdown("""
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+# Injecting the fonts via normal markdown block
+st.markdown('<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />', unsafe_allow_html=True)
+
+# Using raw string (r""") to force Python to ignore the CSS curly braces completely!
+st.markdown(r"""
     <style>
     /* Global Variables Map */
     :root {
@@ -41,7 +43,7 @@ st.markdown("""
         font-family: var(--font) !important;
     }
 
-    /* Reset default Streamlit chat wrappers to support absolute spacing rules */
+    /* Hide standard Streamlit block clutter */
     .stChatMessage {
         background-color: transparent !important;
         border: none !important;
@@ -88,7 +90,7 @@ st.markdown("""
         margin-bottom: 20px;
     }
 
-    /* Fixed Braces for slide-in animation syntax */
+    /* Animation Matrix rules */
     @keyframes slideIn { 
         from { opacity: 0; transform: translateY(8px); } 
         to { opacity: 1; transform: none; } 
@@ -120,7 +122,7 @@ st.markdown("""
         max-width: 85%;
     }
     
-    /* Exact asymmetry radii specifications */
+    /* Radii asymmetries */
     .custom-msg.ai .custom-bubble {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -145,7 +147,7 @@ st.markdown("""
     }
     .custom-msg.ai .bubble-meta { text-align: left; }
 
-    /* Custom Input Bar Styling mapping to spec criteria */
+    /* Custom Input overrides */
     .stChatInputContainer textarea {
         background-color: var(--surface) !important;
         color: var(--text) !important;
